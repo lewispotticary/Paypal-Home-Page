@@ -1,3 +1,20 @@
+@import url(//db.onlinewebfonts.com/c/d8040e905cf0216b6e1b4e39b28d519a?family=PayPal+Sans+Big+Light);
+
+@font-face {
+  font-family: "PayPal Sans Big Light";
+  src: url("//db.onlinewebfonts.com/t/d8040e905cf0216b6e1b4e39b28d519a.eot");
+  src: url("//db.onlinewebfonts.com/t/d8040e905cf0216b6e1b4e39b28d519a.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/d8040e905cf0216b6e1b4e39b28d519a.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/d8040e905cf0216b6e1b4e39b28d519a.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/d8040e905cf0216b6e1b4e39b28d519a.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/d8040e905cf0216b6e1b4e39b28d519a.svg#PayPal Sans Big Light")
+      format("svg");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +22,7 @@
 
 body {
   height: auto;
+  font-family: "PayPal Sans Big Light";
 }
 
 /* Navigation */
@@ -13,13 +31,62 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1rem 0 1rem 0;
   background: #fff;
+  margin: 1rem 20% 1rem 20%;
 }
 
 #paypal-logo {
   width: 136px;
   height: 46px;
+}
+
+#menu-button {
+  display: none;
+  color: #0070ba;
+  background-color: white;
+  border: 1px solid #0070ba;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 10px 18px 10px 18px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+#paypal-logo-mobile {
+  width: 26px;
+  height: 30px;
+  display: none;
+}
+
+#login-button {
+  color: #0070ba;
+  background-color: white;
+  border: 1px solid #0070ba;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 10px 18px 10px 18px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+#login-button:hover {
+  color: #005ea6;
+}
+
+#signup-button {
+  color: white;
+  background-color: #0070ba;
+  border: none;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 10px 18px 10px 18px;
+  margin: 0px 0px 0px 9px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+#signup-button:hover {
+  background-color: #005ea6;
 }
 
 /* Main  */
@@ -31,10 +98,80 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   height: 37.5rem;
+  color: white;
+}
+
+#section-one-content {
+  padding-top: 5rem;
+  max-width: 460px;
+  margin: 0 20% 0 20%;
+}
+
+#section-one-h1 {
+  font-size: 40px;
+  margin-bottom: 3rem;
+}
+
+#learn-more-button {
+  padding: 15px 75px 15px 75px;
+  border-radius: 30px;
+  border: none;
+  color: #003087;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+#section-one-paragraph {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Section One Bottom */
+
+#section-one-bottom {
+  background-color: #0d3685;
+  height: 136px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 600px) {
   #section-one {
     background-image: url("./Images/mobile-background.png");
+    background-size: 100% 50rem;
+    height: 50rem;
+  }
+  #section-one-h1 {
+    font-size: 30px;
+  }
+  #section-one-paragraph {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #paypal-logo-mobile {
+    display: flex;
+  }
+  #navigation-links {
+    display: none;
+  }
+  #paypal-logo {
+    display: none;
+  }
+  #menu-button {
+    display: flex;
+  }
+  #signup-button {
+    display: none;
+  }
+  nav {
+    margin: 0.5rem 5% 0.5rem 5%;
+  }
+  #section-one-content {
+    margin: 0 5% 0 5%;
   }
 }
