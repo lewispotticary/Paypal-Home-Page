@@ -27,6 +27,20 @@ body {
 
 /* Navigation */
 
+#navigation-links a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #2c2e2f;
+  font-weight: bold;
+  padding: 25px 25px 23px;
+}
+
+a:hover {
+  border-bottom: 5px solid black;
+  border-color: #0070ba;
+  margin-bottom: -5px;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -134,9 +148,34 @@ nav {
   background-color: #0d3685;
   height: 136px;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
 }
+
+#section-one-bottom-content {
+  margin: 0 20% 0 20%;
+}
+
+#paypal-business-button {
+  margin: 20px;
+  padding: 11px 18px;
+  border-radius: 20px;
+  color: #0d3685;
+  font-size: 12px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#business-description-short {
+  display: none;
+}
+
+/* Media Queries */
 
 @media only screen and (max-width: 600px) {
   #section-one {
@@ -152,7 +191,7 @@ nav {
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1350px) {
   #paypal-logo-mobile {
     display: flex;
   }
@@ -173,5 +212,9 @@ nav {
   }
   #section-one-content {
     margin: 0 5% 0 5%;
+  }
+  #section-one-bottom-content {
+    margin: 0 5% 0 5%;
+    flex-direction: column;
   }
 }
